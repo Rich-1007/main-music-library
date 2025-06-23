@@ -41,10 +41,11 @@ To run both applications locally, follow these steps:
     In Terminal 1 (for Music Library App)
     ```bash
     cd music-library
-    npm run dev
+    npm run build 
+    npm run preview
     ```
 
-    This will typically start the music library app on `http://localhost:5001` (or a similar port). Ensure this port is accessible by the main app. (In the federation-remoteEntry - remote_app: path)
+    copy the url of the library app - e.g : http:..localhost:4173 and set  remote_app: "http://localhost:4173/assets/remoteEntry.js". (In the federation-remoteEntry - remote_app: path)
 
      In Terminal 2 (for Main Container App)
     ```bash
@@ -52,7 +53,7 @@ To run both applications locally, follow these steps:
     npm run dev
     ```
 
-    This will typically start the main container app on `http://localhost:5000` (or a similar port). Once both are running, the main app should dynamically load the music library app.
+   Once both are running, the main app should dynamically load the music library app.
 
 ## How I Deployed It
 
